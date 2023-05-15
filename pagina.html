@@ -8,25 +8,27 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="main-login">
-        <div class="left-login">
-            <h1>Cadastre-se<br>E entre para a nossa família</h1>
-            <img src="animado.svg" class="left-login-image" alt="Animação da Página">
-        </div>
-        <div class="right-login">
-            <div class="card-login">
-                <h1>LOGIN</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Email/Usuário">
+    <form method="POST" action="formulario.php">
+        <div class="main-login">
+            <div class="left-login">
+                <h1>Cadastre-se<br>E entre para a nossa família</h1>
+                <img src="animado.svg" class="left-login-image" alt="Animação da Página">
+            </div>
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>LOGIN</h1>
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Email/Usuário" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="Endereço de E-mail." required>
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    <input type="submit" value="LOGIN" class="btn-login">
                 </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <button class="btn-login">Login</button>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
